@@ -15,7 +15,7 @@ axios
     const $ = cheerio.load(response.data);
     // Title
     const title = $("._10Ermr").text();
-    console.log(title);
+    console.log(title, "hello");
 
     // Products
     let productsTemp = [];
