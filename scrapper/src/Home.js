@@ -11,7 +11,7 @@ export default function BasicTable() {
       url: "https://www.flipkart.com/grocery/staples/dals-pulses/pr?sid=73z,bpe,3uv&otracker=categorytree&marketplace=GROCERY&fm=neo%2Fmerchandising&iid=M_a56990e6-108e-4bd3-9d45-bcbc70fcb48b_2_SFAIKQL0A2D4_MC.O1V4G01H9SMV&otracker=clp_rich_navigation_1_2.navigationCard.RICH_NAVIGATION_Staples~Dals%2B%2526%2BPulses~All_grocery-supermart-store_O1V4G01H9SMV&otracker1=clp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_1_L2_view-all&cid=O1V4G01H9SMV",
     },
     {
-      title: "Ghee  and oils",
+      title: "Ghee and oils",
       image:
         "https://rukminim1.flixcart.com/flap/128/128/image/50474c.jpg?q=100",
       url: "https://www.flipkart.com/grocery/staples/ghee-oils/pr?sid=73z,bpe,4wu&otracker=categorytree&marketplace=GROCERY&fm=neo%2Fmerchandising&iid=M_9eeb47b5-fca8-4c99-a409-b8a861aad8e0_2_SFAIKQL0A2D4_MC.QW9A7WPEBLP6&otracker=clp_rich_navigation_2_2.navigationCard.RICH_NAVIGATION_Staples~Ghee%2B%2526%2BOils_grocery-supermart-store_QW9A7WPEBLP6&otracker1=clp_rich_navigation_PINNED_neo%2Fmerchandising_NA_NAV_EXPANDABLE_navigationCard_cc_2_L1_view-all&cid=QW9A7WPEBLP6",
@@ -24,17 +24,19 @@ export default function BasicTable() {
     },
   ];
 
+  const buttonPress = (name) => {
+    console.log("name", name);
+  };
+
   return (
     <Grid container justifyContent="center" alignItems="center">
-      <Grid item xs={4}>
+      <Grid item xs={4} onClick={() => buttonPress(data[0].title)}>
         <Card data={data[0]} />
-        ada
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={4} onClick={() => buttonPress(data[1].title)}>
         <Card data={data[1]} />
-        afa
       </Grid>
-      <Grid item xs={4}>
+      <Grid item xs={4} onClick={() => buttonPress(data[2].title)}>
         <Card data={data[2]} />
       </Grid>
     </Grid>
