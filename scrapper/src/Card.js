@@ -8,12 +8,17 @@ export default function MediaCard(props) {
   return (
     <Card sx={{ maxWidth: 345 }}>
       <CardMedia
-        sx={{ height: 200 }}
+        sx={{ height: 300 }}
         image={props.data.image}
         title="green iguana"
       />
       <CardContent>
-        <Typography gutterBottom variant="h5" component="div">
+        <Typography
+          gutterBottom
+          variant="h5"
+          component="div"
+          textAlign={"center"}
+        >
           {props.data.title}
         </Typography>
       </CardContent>
